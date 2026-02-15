@@ -1,0 +1,18 @@
+relationship ef730779-2342-467d-8cb3-885805a09a39
+	joinOnDateBehavior: datePartOnly
+	fromColumn: customers.customer_signup_date
+	toColumn: LocalDateTable_bc84a8d3-7154-44ba-b93a-a929f25cb1d7.Date
+
+relationship 65da1ec6-09f9-485f-b788-33ae2a3b7dff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: website_sessions.session_date
+	toColumn: LocalDateTable_bc1e22df-900b-4d8b-a1e2-05d8bf9f7ae9.Date
+
+relationship AutoDetected_8211240b-ddd4-4077-a6a7-246ab0d9bd9f
+	fromColumn: website_sessions.customer_id
+	toColumn: customers.customer_id
+
+relationship AutoDetected_0dfafa42-2884-4aa7-b6b5-0c9a57f3f357
+	fromColumn: sales.customer_id
+	toColumn: customers.customer_id
+
