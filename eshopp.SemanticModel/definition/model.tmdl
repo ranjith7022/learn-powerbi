@@ -8,9 +8,9 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
 
-annotation PBI_QueryOrder = ["customers","website_sessions","sales"]
+annotation PBI_QueryOrder = ["customers","website_sessions","sales","dates","products","stores"]
 
 ref table customers
 ref table DateTableTemplate_7901cf53-d362-4b4e-a690-1c20133bebaa
@@ -18,6 +18,11 @@ ref table LocalDateTable_bc84a8d3-7154-44ba-b93a-a929f25cb1d7
 ref table website_sessions
 ref table LocalDateTable_bc1e22df-900b-4d8b-a1e2-05d8bf9f7ae9
 ref table sales
+ref table dates
+ref table LocalDateTable_5ce84caf-9008-42fd-917d-9a18cb396e71
+ref table products
+ref table stores
+ref table LocalDateTable_b9fcfa2b-b945-412a-9f65-2a1e2b777353
 
 ref cultureInfo en-US
 
