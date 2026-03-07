@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "07bbce0bf20b9d89258f",
   "position": {
-    "x": 650.083738955916,
+    "x": 640.63484740132424,
     "y": 0,
-    "z": 1,
+    "z": 1000,
     "height": 720.00553645989532,
-    "width": 629.29617753581408,
-    "tabOrder": 1
+    "width": 638.74506909040588,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -42,8 +42,53 @@
               },
               "queryRef": "customers.customer_avg_age",
               "nativeQueryRef": "customer_avg_age"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "sales"
+                    }
+                  },
+                  "Property": "revenue_in_feb"
+                }
+              },
+              "queryRef": "sales.revenue_in_feb",
+              "nativeQueryRef": "revenue_in_feb"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "stores"
+                    }
+                  },
+                  "Property": "oldest_store_open_date"
+                }
+              },
+              "queryRef": "stores.oldest_store_open_date",
+              "nativeQueryRef": "oldest_store_open_date"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "website_sessions"
+                    }
+                  },
+                  "Property": "session_quality_score_avg_scaled"
+                }
+              },
+              "queryRef": "website_sessions.session_quality_score_avg_scaled",
+              "nativeQueryRef": "session_quality_score_avg_scaled"
             }
           ]
+        },
+        "Rows": {
+          "projections": []
         }
       },
       "sortDefinition": {
@@ -65,12 +110,48 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "layout": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "rowCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "3738d2d3c5bcf3b44efc",
+        "name": "3bd4a671b033b655bd8e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "sales"
+              }
+            },
+            "Property": "total_units_sold"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6f631a6471051dc3b159",
         "field": {
           "Measure": {
             "Expression": {
@@ -84,7 +165,7 @@
         "type": "Advanced"
       },
       {
-        "name": "72536f9d0305452c8deb",
+        "name": "cbf89fd2b2370849a618",
         "field": {
           "Measure": {
             "Expression": {
@@ -92,7 +173,35 @@
                 "Entity": "sales"
               }
             },
-            "Property": "total_units_sold"
+            "Property": "revenue_in_feb"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0279f8205c0aa703e09d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "stores"
+              }
+            },
+            "Property": "oldest_store_open_date"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "20ceb7811c69e16d1950",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "website_sessions"
+              }
+            },
+            "Property": "session_quality_score_avg_scaled"
           }
         },
         "type": "Advanced"

@@ -1,6 +1,19 @@
 table website_sessions
 	lineageTag: 304b3995-55b7-40c9-81cf-0afc3126baf0
 
+	measure session_quality_score_avg_scaled = INT(AVERAGEX(website_sessions,website_sessions[session_quality_score]*100))
+		lineageTag: 42a2e005-1877-482f-b064-ba55c4368dcc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure target_quality_score = 50
+		formatString: 0
+		lineageTag: 04bf9575-ea46-4e30-be83-8f8859789c1b
+
+	measure max_quality_score = 100
+		formatString: 0
+		lineageTag: b1cd0ded-4cad-4780-8b94-f1364751a3aa
+
 	column session_id
 		dataType: string
 		lineageTag: 6ab1df5c-6f9a-40b4-a0da-0afefb95d185
